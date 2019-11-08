@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+@import "reset";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: black;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  header {
+    position: absolute;
+    z-index: 3;
+    padding: 15px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    .logo {
+      width: 50px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    nav {
+      align-self: center;
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 300;
+        padding: 0 10px;
+
+        &:hover {
+          color: black;
+          transition: all ease-in-out 0.3s;
+        }
+      }
+    }
+  }
+}
+
+#top-section {
+  position: relative;
+  height: 100vh;
+
+  .blurredbg {
+    background-image: linear-gradient(45deg, rgba(0,0,0,1) 0%,rgba(0,0,0,0.75) 50%,rgba(40,62,255,0.5) 100%), url("/img/omega.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    filter: blur(40px) saturate(130%);
+    position: absolute;
+    z-index: 1;
+  }
+
+  .floating-image {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .kenny-image {
+    width: 30%;
+
+    img {
+      width: 100%;
+      filter: contrast(150%);
+    }
+  }
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+#bio {
+  background: black;
+  position: relative;
+  z-index: 3;
+  padding: 100px 0;
+
+  .container {
+    display: flex;
+  }
+
+  p {
+    width: 50%;
+    color: white;
+    line-height: 1.8;
+    font-size: 0.9rem;
+    padding: 0 50px;
+  }
+
+  .logo-centered {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+  }
+}
+
+#media {
+  padding: 100px 0;
+  background: white;
+
+  .title {
+    background: black;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .videos {
+    padding: 80px 50px 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 50px;
+
+    .vid {
+      border-radius: 5px;
+      overflow: hidden;
+      height: 300px;
+      -webkit-box-shadow: 0 0 12px 2px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0 0 12px 2px rgba(0,0,0,0.75);
+      box-shadow: 0 0 12px 2px rgba(0,0,0,0.75);
+
+      iframe {
+        height: 100%;
+      }
+    }
+  }
+}
+
+#tour {
+  background: black;
+  position: relative;
+  z-index: 4;
+
+  .top-img {
+    background-image: url("/img/elite.jpg");
+    height: 180px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: saturate(0%) contrast(150%);
+  }
+
+  .tourdates {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0;
+
+    .title {
+      text-align: center;
+      color: white;
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      margin: 0 0 80px;
+      font-weight: 500;
+    }
+  }
+
+  .dates {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+
+    li {
+      color: white;
+      font-size: 1.2rem;
+
+      span {
+        padding: 0 10px;
+      }
+
+      .city {
+        font-weight: 700;
+      }
+
+      .location {
+        font-size: 1rem;
+        font-weight: 300;
+      }
+
+      .date {
+        font-weight: 500;
+        color: #283EFF;
+      }
+    }
+  }
+}
+
+footer {
+  background: black;
+  position: relative;
+  z-index: 4;
+  padding: 25px;
+  text-align: center;
+  color: white;
+
+  img {
+    max-width: 50px;
+    padding: 0 0 10px;
+  }
+
+  a {
+    color: #283EFF;
+    text-decoration: none;
+  }
+}
